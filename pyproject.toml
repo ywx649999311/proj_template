@@ -9,6 +9,9 @@ readme = "README.md"
 python = "^3.11"
 ipykernel = "^6.27.0"
 
+[tool.jupytext]
+formats = "ipynb,py:percent"
+notebook_metadata_filter="-all"
 
 [build-system]
 requires = ["poetry-core"]

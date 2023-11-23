@@ -25,3 +25,11 @@ $ source .venv/bin/activate
 ```
 $ poetry run python3 -m ipykernel install --user --name proj --display-name "proj (poetry)"
 ```
+
+5. Install & Enable `jupytext` (for version control notebooks):
+
+    a. Install `jupytext` under the env runing your Jupyter server:
+
+> see: https://jupytext.readthedocs.io/en/latest/install.html#installation
+
+    b. Restart Jupyter server
