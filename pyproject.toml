@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "proj"
+version = "0.1.0"
+description = ""
+authors = ["Weixiang Yu <astro.flyfish@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+ipykernel = "^6.27.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
