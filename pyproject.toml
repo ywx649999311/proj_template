@@ -8,6 +8,7 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = "^3.11"
 ipykernel = "^6.27.0"
+pre-commit = "^3.5.0"
 
 [tool.jupytext]
 formats = "ipynb,py:percent"
