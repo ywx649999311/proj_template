@@ -7,19 +7,19 @@
 
 2. Config `poetry`:
 ```
-$ poetry config virtualenvs.in-project true
+poetry config virtualenvs.in-project true
 ```
 3. Create the virtual environment for the project:
 ```
-$ poetry install
+poetry install
 ```
 One can activate the virtual env with (when needed to):
 ```
-$ source .venv/bin/activate
+source .venv/bin/activate
 ```
 4. Create and add ipykernel for the poetry environment:
 ```
-$ poetry run python3 -m ipykernel install --user --name proj --display-name "proj (poetry)"
+poetry run python3 -m ipykernel install --user --name proj --display-name "proj (poetry)"
 ```
 
 ### Jupytext
@@ -34,5 +34,5 @@ $ poetry run python3 -m ipykernel install --user --name proj --display-name "pro
 ### Pre-commit
 6. Run the following:
 ```
-$ poetry run pre-commit install
+poetry run pre-commit install
 ```
