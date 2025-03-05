@@ -1,32 +1,38 @@
-[tool.poetry]
+[project]
 name = "proj"
 version = "0.1.0"
 description = ""
-authors = ["Weixiang Yu <astro.flyfish@gmail.com>"]
+authors = [
+    {name = "Weixiang Yu",email = "astro.flyfish@gmail.com"}
+]
 readme = "README.md"
+requires-python = ">=3.10, <4.0"
+dependencies =[
+    "ipykernel (>=6.29.0, <7.0.0)",
+    "matplotlib (>=3.3.0, <4.0.0)",
+    "pyarrow (>=14.0.0, <20.0.0)",
+    "pandas (>=2.0.0, <3.0.0)"
+]
 
-[tool.poetry.dependencies]
-python = "^3.11"
-ipykernel = "^6.27.0"
+[tool.poetry.group.dev.dependencies]
 pre-commit = "^3.5.0"
-black = "^23.11.0"
-ruff = "^0.1.6"
+ruff = "^0.2.1"
 
-[build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+[tool.poetry.group.test.dependencies]
+pytest = "^6.0.1"
+pytest-cov = "^2.10.1"
+nox = "^2023.4.22"
+nox-poetry = "^1.0.3"
+poetry-plugin-export = "^1.6.0"
 
 [tool.jupytext]
 formats = "ipynb,py:percent"
 notebook_metadata_filter="-all"
 
-[tool.black]
-target-version = ["py311"]
-line-length = 88
-
 [tool.ruff]
-target-version = "py311"
+target-version = "py312"
 line-length = 88
+select = ["E", "F", 'I', 'W', 'UP']
 ignore = [
     "E741",    # Allow ambiguous variable names
     "PLR0911", # Allow many return statements
@@ -34,4 +40,11 @@ ignore = [
     "PLR0915", # Allow many statements
     "PLR2004", # Allow magic numbers in comparisons
 ]
-exclude = []
+
+[tool.ruff.format]
+skip-magic-trailing-comma = false
+quote-style = "double"  # Matches Black's double-quote style
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
