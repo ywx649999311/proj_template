@@ -13,10 +13,10 @@ poetry config virtualenvs.in-project true
 ```
 poetry install
 ```
-One can activate the virtual env with (when needed to):
+<!-- One can activate the virtual env with (when needed to):
 ```
 source .venv/bin/activate
-```
+``` -->
 4. Create and add ipykernel for the poetry environment:
 ```
 poetry run python3 -m ipykernel install --user --name proj --display-name "proj (poetry)"
