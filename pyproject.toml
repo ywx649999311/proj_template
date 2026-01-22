@@ -6,7 +6,7 @@ authors = [
     {name = "Weixiang Yu",email = "astro.flyfish@gmail.com"}
 ]
 readme = "README.md"
-requires-python = ">=3.10, <4.0"
+requires-python = ">=3.10, <3.13"
 dependencies =[
     "ipykernel (>=6.29.0, <7.0.0)",
     "matplotlib (>=3.3.0, <4.0.0)",
@@ -39,11 +39,10 @@ ignore = [
     "PLR0913", # Allow many arguments to functions
     "PLR0915", # Allow many statements
     "PLR2004", # Allow magic numbers in comparisons
+    "F405",
+    "F403"
 ]
 
-[tool.ruff.format]
-skip-magic-trailing-comma = false
-quote-style = "double"  # Matches Black's double-quote style
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
